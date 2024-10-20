@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Converter</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleText.css">
+</head>
+<body>
+
+
+
+    <div class="hero">
+        <h1>IntelliLearn AI <span>Text-to-Speech</span></h1>
+        <textarea placeholder="Write anything here..."></textarea>
+        <div class="row">
+            <select></select>
+            <button><span class="material-icons">volume_up</span>Listen</button>
+        </div>
+    </div>
+    
+    <button class="back-button" onclick="goBack()">
+        <span class="material-icons">arrow_back</span> Back
+    </button>
+
+    <button class="summarize-button" onclick="goToSummarizePage()">
+        <span class="material-icons">summarize</span> Summarize Textbook
+    </button>
+    
+    <script src="javaScript.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summarizer</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesSummarization.css">
+    
+
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+        <span class="material-icons">arrow_back</span> Back
+    </button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <div class="container">
+        <h1>Upload Book PDF for Summarization</h1>
+        <form id="pdfForm">
+            <input type="file" id="pdfInput" accept=".pdf">
+            <button type="button" id="uploadButton">Upload & Summarize</button>
+        </form>
+        <div id="summaryContainer">
+            <h2>Summary</h2>
+            <p id="summaryText"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', Arial, sans-serif; /* Updated to match the HTML */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    font-size: 16px; /* Moved font size here for consistency */
+}
+
+/* Header styles */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+/* Search bar styles */
+.search-bar input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    width: 200px; /* Fixed width for search bar */
+}
+
+/* Navigation styles */
+nav {
+    background-color: #2980b9;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1c638e;
+}
+
+/* Hero content styles */
+.hero-content {
+    max-width: 800px;
+    margin: 2rem auto; /* Centered hero content */
+    padding: 2rem;
+    background-color: white; /* White background for hero section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.hero-content h2 {
+    color: #2980b9; /* Primary color for headings */
+    margin-top: 1.5rem; /* Spacing above headings */
+    margin-bottom: 0.5rem; /* Spacing below headings */
+}
+
+.hero-content ul {
+    margin-left: 1.5rem; /* Indentation for lists */
+    margin-bottom: 1rem; /* Space below lists */
+}
+
+/* Login container styles */
+.login-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: calc(100vh - 60px); /* Adjusted for header/footer height */
+}
+
+.login-box {
+    background-color: white; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 400px; 
+}
+
+/* Form input styles */
+.input-field {
+   margin-bottom: 20px; 
+   text-align:left; 
+}
+
+label {
+   display:block; 
+   margin-bottom:.5rem; 
+   font-weight:bold; 
+}
+
+input[type="text"],
+input[type="password"] {
+   width:auto; 
+   padding:.5rem; 
+   margin-bottom:.5rem; 
+   border-radius:.25rem; 
+   border:.5px solid #ddd; 
+}
+
+/* CTA buttons styles */
+.cta-buttons {
+   display:flex; 
+   justify-content:center; 
+   gap:.75rem; 
+   margin-top:.75rem; 
+}
+
+/* Button styles */
+.btn,
+input[type="submit"] {
+   display:inline-block; 
+   background-color:#007BFF ; /* Soft blue color for buttons */  
+   color:white ;  
+   padding:.7rem ;  
+   text-decoration:none ;  
+   border-radius:.25rem ;  
+   transition:.3s ;  
+}
+
+.btn:hover,
+input[type="submit"]:hover {
+   background-color:#0056b3 ; /* Darker blue on hover */  
+}
+
+/* Additional links styles */
+.additional-links {
+   margin-top:.75rem ;
+}
+
+.additional-links a {
+   display:block ;  
+   color:#007BFF ;  
+   text-decoration:none ;  
+   margin-bottom:.5rem ;  
+   font-weight:bold ;  
+}
+
+.additional-links a:hover {
+   text-decoration:inline-block underline ;
+}
+
+/* Social media login styles */
+.social-media-login {
+   display:flex ;  
+   justify-content:center ;  
+   gap:.75rem ;
+}
+
+.social-media-login img {
+   width:auto ;
+   height:auto ;
+   max-width:max(40px ,10vw) ; /* Responsive size based on viewport width */  
+}
+
+/* Footer styles */
+footer {
+     background-color:#34495e ;  
+     color:white ;  
+     text-align:center ;  
+     padding:.75rem ;
+     position:absolute ; /* Changed to absolute to prevent overlap with content */   
+     bottom:-60px ; /* Adjusted to avoid overlap with content */   
+     width:auto ;
+}
+
+/* Responsive design */
+@media (max-width :768px) {  
+     header {  
+         flex-direction :column ;  
+         text-align :center ;  
+     }  
+
+     .search-bar {  
+         margin-top :1rem ;  
+     }  
+
+     nav ul {  
+         flex-direction :column ;  
+         align-items :center ;  
+     }  
+
+     nav ul li {  
+         margin :0.5rem 0 ;  
+     }  
+
+     .hero-content {  
+         margin :1rem ;  
+         padding :1rem ;  
+     }  
+
+     .cta-buttons {  
+         flex-direction :column ;   
+     }  
+
+     .btn {   
+         width :100% ;
+         text-align:center ;
+     }  
+
+     .login-box {   
+         margin :1rem ;
+         padding :1rem ;
+     }
+
+     .social-media-login {   
+         flex-direction :column ;
+     }
+}
+
+/* Accessibility enhancements */
+a :focus , input :focus , button :focus {   
+     outline :2 px solid #3498db ;
+     outline-offset :2 px ;
+}  
+
+.btn :focus {   
+     outline-color :#fff ;
+}  
+
+/* High contrast mode */
+@media (prefers-contrast :high) {   
+     body {   
+         background-color :#000 ;
+         color :#fff ;
+     }  
+
+     .hero-content {   
+         background-color :#333 ;
+         color :#fff ;
+     }  
+
+     .btn {   
+         background-color :#fff ;
+         color :#000 ;
+     }  
+
+     .btn:hover {   
+         background-color :#ddd ;
+     }
+}
